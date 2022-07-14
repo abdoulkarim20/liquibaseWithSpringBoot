@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <preConditions>
+        <runningAs username="postgres"/>
+    </preConditions>
+    <changeSet id="003" author="Abdoul Karim DIALLO">
+        <comment>Cette tache consiste a ajouter une cle etrangere provenant dans la table categorie</comment>
+        <addColumn tableName="produits">
+            <column name="categorie_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+        <addForeignKeyConstraint baseTableName="produits" baseColumnNames="categorie_id" constraintName="fk_categorie" referencedTableName="categories"
+                                 referencedColumnNames="id" onDelete="RESTRICT" onUpdate="CASCADE"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <preConditions>
+        <runningAs username="postgres"/>
+    </preConditions>
+    <changeSet  id="002"  author="abdoul karim DIALLO">
+        <comment>
+            Cette tache consiste a ajouter deux colonnes sur la table produit
+        </comment>
+        <addColumn tableName="produits">
+            <column name="prix" type="double" afterColumn="productName">
+                <constraints nullable="false"/>
+            </column>
+            <column name="photo" type="varchar(200)" afterColumn="prix">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

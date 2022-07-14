@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <include file="db/changelog/20221407_1141_create_entitie_categorie.xml"/>
+    <include file="db/changelog/20221407_1154_add_column_to_entitie_categorie.xml"/>
+    <include file="db/changelog/20221407_1209_create_entitie_produit.xml"/>
+    <include file="db/changelog/20221407_1217_add_column_to_table_produit.xml"/>
+    <include file="db/changelog/20221407_1222_rename_column_to_entitie_produit.xml"/>
+    <include file="db/changelog/20221407_1230_add_foreign_key_to_entitie_produit.xml"/>
+</databaseChangeLog>

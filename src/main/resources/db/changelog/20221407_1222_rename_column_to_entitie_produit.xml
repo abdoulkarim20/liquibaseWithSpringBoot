@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+    <preConditions>
+        <runningAs username="postgres"/>
+    </preConditions>
+    <changeSet id="003" author="Abdoul Karim DIALLO">
+        <comment>Cette tache consiste a renommer productName par libelle</comment>
+        <renameColumn tableName="produits" oldColumnName="productName" newColumnName="libelle"/>
+    </changeSet>
+</databaseChangeLog>
